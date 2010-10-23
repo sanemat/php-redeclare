@@ -8,7 +8,7 @@ class MyConfig
 
   public static function getMemCachePort()
   {
-    return 11222;
+    return '11222';
   }
 }
 ?>

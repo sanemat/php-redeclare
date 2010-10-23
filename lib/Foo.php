@@ -4,7 +4,7 @@ class Foo
   public function example()
   {
     $proxyUrl = MyConfig::getProxy();
-    // ... continued
+    return $proxyUrl . '/end_point';
   }
 }
 ?>
