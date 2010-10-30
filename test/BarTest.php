@@ -1,14 +1,11 @@
 <?php
-require_once dirname(__FILE__) . '/../lib/Bar.php';
-class MyConfig
-{
-  public static function getMemCachePort()
-  {
-    return '11211';
-  }
-}
 class BarTest extends PHPUnit_Framework_TestCase
 {
+  protected function setUp()
+  {
+    require_once dirname(__FILE__) . '/BarAutoLoad.php';
+    require_once dirname(__FILE__) . '/../lib/Bar.php';
+  }
   public function testStatement()
   {
     $bar = new Bar();
