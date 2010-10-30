@@ -3,7 +3,7 @@ class BarTest extends PHPUnit_Framework_TestCase
 {
   protected function setUp()
   {
-    require_once dirname(__FILE__) . '/BarAutoLoad.php';
+    require_once dirname(__FILE__) . '/BarAutoload.php';
     require_once dirname(__FILE__) . '/../lib/Bar.php';
   }
   public function testStatement()
