@@ -1,14 +1,11 @@
 <?php
-require_once dirname(__FILE__) . '/../lib/Foo.php';
-class MyConfig
-{
-  public static function getProxy()
-  {
-    return 'http://example.org';
-  }
-}
 class FooTest extends PHPUnit_Framework_TestCase
 {
+  protected function setUp()
+  {
+    require dirname(__FILE__) . '/FooAutoLoad.php';
+    require dirname(__FILE__) . '/../lib/Foo.php';
+  }
   public function testEndpoint()
   {
     $foo = new Foo();
