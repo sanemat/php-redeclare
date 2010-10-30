@@ -1,10 +1,10 @@
 <?php
+require_once dirname(__FILE__) . '/../lib/Foo.php';
 class FooTest extends PHPUnit_Framework_TestCase
 {
   protected function setUp()
   {
-    require dirname(__FILE__) . '/FooAutoload.php';
-    require dirname(__FILE__) . '/../lib/Foo.php';
+    require_once dirname(__FILE__) . '/FooAutoload.php';
   }
   public function testEndpoint()
   {
